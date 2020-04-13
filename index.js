@@ -1,9 +1,10 @@
-// Load env variables
+const sgMail = require('@sendgrid/mail');
 const dotenv = require('dotenv');
+
+// Load env variables
 dotenv.config({ path: './config/config.env' });
 
-// Bring in sendgrid mail and set your API Key
-const sgMail = require('@sendgrid/mail');
+// Set your API Key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Configure message
